@@ -48,3 +48,83 @@ O uso de herança (extends)
 A chamada do construtor da classe mãe (super())
 
 A diferença entre atributos da classe base e da classe filha
+
+
+
+# 🧩 Exercício 2 (intermediário): Funcionário, Gerente e Diretor
+
+Você deve criar um sistema que represente diferentes cargos em uma empresa com herança e polimorfismo.
+
+### 🔹 Instruções:
+
+Classe Funcionario (base)
+
+Atributos:
+
+nome (String)
+
+salario (double)
+
+departamento (String)
+
+Métodos:
+
+Construtor para inicializar os dados
+
+exibirDados() → mostra nome, salário e departamento
+
+aumentarSalario(double percentual) → aumenta o salário pelo percentual informado
+
+Classe Gerente (herda de Funcionario)
+
+Atributos:
+
+bonus (double)
+
+Métodos:
+
+Construtor que inicializa todos os atributos (incluindo os da classe mãe)
+
+exibirDados() → mostra nome, salário, departamento e bônus
+
+aumentarSalario(double percentual) → aumenta o salário + aplica 50% do bônus como aumento adicional (sobrescrevendo o método da classe mãe)
+
+Classe Diretor (herda de Gerente)
+
+Atributos:
+
+participacaoLucros (double)
+
+Métodos:
+
+Construtor que inicializa todos os atributos (incluindo os da classe mãe)
+
+exibirDados() → mostra nome, salário, departamento, bônus e participação nos lucros
+
+Classe Main
+
+Criar pelo menos:
+
+Um Funcionario
+
+Um Gerente
+
+Um Diretor
+
+Testar:
+
+exibirDados() de cada um
+
+aumentarSalario() de cada um e mostrar novamente os dados
+
+🧠 Objetivo:
+
+Esse exercício serve para treinar:
+
+Herança múltipla de níveis (Funcionario → Gerente → Diretor)
+
+Polimorfismo (sobrescrever métodos)
+
+Uso de atributos adicionais em classes filhas
+
+Chamadas a super() no construtor e em métodos
