@@ -1,6 +1,6 @@
-"# exercicioHerancaPOOJava" 
+# exercicioHerancaPOOJava 
 
-🧩 Exercício: Funcionário e Gerente
+## 🧩 Exercício: Funcionário e Gerente
 
 Você deve criar um pequeno sistema para representar funcionários de uma empresa.
 A empresa possui dois tipos de pessoas que trabalham nela:
@@ -9,7 +9,7 @@ Funcionário comum
 
 Gerente
 
-🔹 Instruções:
+### 🔹 Instruções:
 
 Crie uma classe chamada Funcionario com os seguintes atributos:
 
