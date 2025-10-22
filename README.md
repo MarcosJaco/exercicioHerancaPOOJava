@@ -1,6 +1,6 @@
-# exercicioHerancaPOOJava 
+# exerciciosHerancaPOOJava
 
-## 🧩 Exercício: Funcionário e Gerente
+## 🧩 Exercício 1 (fácil): Funcionário e Gerente
 
 Você deve criar um pequeno sistema para representar funcionários de uma empresa.
 A empresa possui dois tipos de pessoas que trabalham nela:

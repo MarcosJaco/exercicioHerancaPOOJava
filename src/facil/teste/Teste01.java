@@ -1,9 +1,9 @@
-package teste;
+package facil.teste;
 
-import dominio.Funcionario;
-import dominio.Gerente;
+import facil.dominio.Funcionario;
+import facil.dominio.Gerente;
 
-public class Test01 {
+public class Teste01 {
     public static void main(String[] args) {
         Funcionario funcionario = new Funcionario("Fulano", 3000);
         Gerente gerente = new Gerente("Marcos", 7000, 3000);

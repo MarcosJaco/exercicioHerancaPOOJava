@@ -1,4 +1,4 @@
-package dominio;
+package facil.dominio;
 
 public class Funcionario{
     private String nome;

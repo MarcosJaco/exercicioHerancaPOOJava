@@ -1,4 +1,4 @@
-package dominio;
+package facil.dominio;
 
 public class Gerente extends Funcionario {
     private double bonus;
