@@ -128,3 +128,111 @@ Polimorfismo (sobrescrever métodos)
 Uso de atributos adicionais em classes filhas
 
 Chamadas a super() no construtor e em métodos
+
+# 🧩 Exercício 3 (avançado): Sistema de Funcionários com Tipos e Cálculo de Pagamento
+
+🧠 Objetivo geral:
+
+Criar uma estrutura hierárquica de funcionários que permita o cálculo polimórfico dos salários com base em diferentes critérios (bônus, comissão, lucro etc.), utilizando classes abstratas, métodos sobrescritos e listas de objetos (polimorfismo em coleção).
+
+### 🔹 Estrutura de classes:
+Classe abstrata Funcionario (base)
+
+Atributos:
+
+nome (String)
+
+salarioBase (double)
+
+Métodos:
+
+Construtor para inicializar os dados.
+
+public abstract double calcularSalarioFinal() → método abstrato que será implementado pelas subclasses.
+
+public void exibirDados() → mostra nome e salário base.
+
+public String toString() → retorna uma descrição textual do funcionário e do salário final.
+
+Classe Gerente (herda de Funcionario)
+
+Atributos:
+
+bonus (double)
+
+Métodos:
+
+Construtor que inicializa todos os atributos.
+
+@Override calcularSalarioFinal() → retorna salarioBase + bonus.
+
+@Override exibirDados() → mostra nome, salário base e bônus.
+
+Classe Vendedor (herda de Funcionario)
+
+Atributos:
+
+comissao (double)
+
+vendasRealizadas (int)
+
+Métodos:
+
+Construtor que inicializa todos os atributos.
+
+@Override calcularSalarioFinal() → retorna salarioBase + (comissao * vendasRealizadas).
+
+@Override exibirDados() → mostra nome, salário base, comissão e número de vendas.
+
+Classe Diretor (herda de Gerente)
+
+Atributos:
+
+participacaoLucros (double)
+
+Métodos:
+
+Construtor que inicializa todos os atributos (usando super()).
+
+@Override calcularSalarioFinal() → retorna salarioBase + bonus + participacaoLucros.
+
+@Override exibirDados() → mostra nome, salário base, bônus e participação nos lucros.
+
+Classe Empresa (gerenciadora)
+
+Atributos:
+
+List<Funcionario> funcionarios
+
+Métodos:
+
+adicionarFuncionario(Funcionario f)
+
+exibirFolhaPagamento() → percorre a lista e exibe o toString() de cada funcionário.
+
+calcularCustoTotal() → soma o salário final de todos os funcionários.
+
+Classe Main (teste)
+
+Criar uma instância de Empresa.
+
+Adicionar:
+
+1 Gerente
+
+2 Vendedores
+
+1 Diretor
+
+Exibir a folha de pagamento.
+
+Mostrar o custo total da empresa com salários.
+
+💡 Conceitos que esse exercício treina:
+Conceito	Explicação
+Herança de múltiplos níveis	Funcionario → Gerente → Diretor
+Polimorfismo	Lista de Funcionario que armazena diferentes tipos (Gerente, Vendedor, Diretor)
+Métodos abstratos	Forçam subclasses a implementar calcularSalarioFinal()
+Sobrescrita de métodos	Cada tipo de funcionário calcula o salário de forma diferente
+Encapsulamento	Uso de atributos private e getters/setters opcionais
+toString() personalizado	Representação legível dos objetos
